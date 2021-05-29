@@ -12,9 +12,9 @@ This paper replace the Self-Attention block in the Transformer architecture with
  # N = number of layers, dhidden = input embedding size
  model = Fnet(N=2, dhidden=32)
  model = model.train(False)
- # batch_size=2, sequence_length=8, dhidden=32
+ # Input embedding (not included in the model): batch_size=2, sequence_length=8, dhidden=32
  x = torch.randn((2, 8, 32))
- y = model(x)
+ y = model(x) # y.shape = (2, 8, 32), model representation without the output projection
  ```
  
  ## Citation
