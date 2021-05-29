@@ -5,6 +5,13 @@ This paper replace the Self-Attention block in the Transformer architecture with
 
 <img src="./fnet.png" width="300px"></img>
 
+## Basic idea
+ - Attention is a mechanism for facilitating interaction between tokens in a sequence (mixing tokens)
+ - This paper mixes tokens using Discrete Fourier Transform.
+ - Advantage: 
+   - DFT is unparametrized (the basis/weights are fixed, drastic reduction in num. of params.)
+   - Computing DFT using FFT is extremely fast.
+   
 ## Usage
 ```python
  import torch
